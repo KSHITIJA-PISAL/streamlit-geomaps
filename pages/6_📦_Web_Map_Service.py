@@ -17,7 +17,7 @@ st.sidebar.image(logo)
 
 @st.cache_data
 def get_layers(url):
-    options = leafmap.add_wms_layers(url)
+    options = leafmap.get_wms_layers(url)
     return options
 
 
