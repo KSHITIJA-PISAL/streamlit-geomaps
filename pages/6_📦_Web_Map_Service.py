@@ -1,6 +1,7 @@
 import ast
 import streamlit as st
 import leafmap.foliumap as leafmap
+import leafmap.common as cleafmap
 
 st.set_page_config(layout="wide")
 
@@ -17,7 +18,7 @@ st.sidebar.image(logo)
 
 @st.cache_data
 def get_layers(url):
-    options = leafmap.get_wms_layers(url)
+    options = cleafmap.get_wms_layers(url)
     return options
 
 
