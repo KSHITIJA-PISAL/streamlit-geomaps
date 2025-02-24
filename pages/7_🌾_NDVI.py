@@ -74,17 +74,17 @@ with row1_col2:
 
     # District selection
     districts = load_districts()
-    district_name = st.selectbox("Select District", [district[1] for district in districts], placeholder="Choose a district")
+    district_name = st.selectbox("Select District", [district[1] for district in districts], on_change= None)
 
     # Taluka selection based on the selected district
     selected_district_code = next(district[0] for district in districts if district[1] == district_name)
     talukas = load_talukas(selected_district_code)
-    taluka_name = st.selectbox("Select Taluka", [taluka[1] for taluka in talukas], placeholder="Choose a taluka")
+    taluka_name = st.selectbox("Select Taluka", [taluka[1] for taluka in talukas], on_change= None)
 
     # Village selection based on the selected taluka
     selected_taluka_code = next(taluka[0] for taluka in talukas if taluka[1] == taluka_name)
     villages = load_villages(selected_taluka_code)
-    village_name = st.selectbox("Select Village", [village[1] for village in villages], placeholder="Choose a village")
+    village_name = st.selectbox("Select Village", [village[1] for village in villages], on_change= None)
 
 with row1_col1:
     AOI= st.file_uploader('Upload geojson file of the AOI', ['geojson'], accept_multiple_files=False, )
