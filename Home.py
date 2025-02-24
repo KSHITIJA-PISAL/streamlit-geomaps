@@ -38,3 +38,5 @@ st.markdown(markdown)
 m = leafmap.Map(minimap_control=True)
 m.add_basemap("OpenTopoMap")
 m.to_streamlit(height=500)
+m.save("test_map_print.html")
+

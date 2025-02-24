@@ -40,7 +40,7 @@ with row1_col2:
 
     esa_landcover = "https://services.terrascope.be/wms/v2"
     url = st.text_input(
-        "Enter a WMS URL:", value="https://services.terrascope.be/wms/v2"
+        "Enter a WMS URL:", value="http://gis.mahapocra.gov.in:6655/geoserver/PoCRA_Dashboard_V2/wms"
     )
     empty = st.empty()
 
@@ -66,7 +66,7 @@ with row1_col2:
             )
 
     with row1_col1:
-        m = leafmap.Map(center=(36.3, 0), zoom=2)
+        m = leafmap.Map(center=(20, 80), zoom=4)
 
         if layers is not None:
             for layer in layers:
